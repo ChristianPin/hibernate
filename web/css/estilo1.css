@@ -1,0 +1,71 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 24/06/2019, 11:11:12
+    Author     : chris
+*/
+
+body{
+    background: url('../imagem/fundo.png') no-repeat;
+}
+
+h1{
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+    color: #5e0d65; 
+}
+
+#cont{
+    -webkit-transition: all ease-in-out 0.6s;
+    transition: all ease-in-out 0.6s;
+    background-color: #d4d4d4;
+    width: 450px;
+    margin-top: 120px;
+    padding-left: 100px;
+    padding-right: 100px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px #265a88;
+}
+
+center{
+    -webkit-transition: all ease-in-out 0.6s;
+    transition: all ease-in-out 0.6s;
+}
+
+a{
+    letter-spacing: 0.08em;
+    font-size: 25px;
+    font-weight: 900;
+    color: #fff;
+    border-radius: 5px;
+    padding: 6px 200px;
+    text-transform: uppercase;
+    transition: background 0.4s, color 0.4s;
+}
+
+#bt1 {
+    width: 200px;
+    height: 50px;
+    background: #a0089e;
+    border-radius: 8px;
+    color: #f0f0f0;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    padding: 10px 60px;
+    left:5%;
+    margin-top: 8px;
+    text-transform: uppercase;
+    -webkit-transition: all ease-in-out 0.6s;
+    transition: all ease-in-out 0.6s;
+}
+
+#bt1:focus,
+#bt1:hover {
+    background: #ffffff;
+    color: #000000;
+}

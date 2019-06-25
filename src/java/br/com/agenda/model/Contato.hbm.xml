@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 24/06/2019 16:42:10 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="br.com.agenda.model.Contato" table="contato" catalog="agenda" optimistic-lock="version">
+        <id name="idContato" type="java.lang.Integer">
+            <column name="idContato" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="usuario" class="br.com.agenda.model.Usuario" fetch="select">
+            <column name="idUsuario" />
+        </many-to-one>
+        <property name="nome" type="string">
+            <column name="nome" length="50" not-null="true" />
+        </property>
+        <property name="cargo" type="string">
+            <column name="cargo" length="30" />
+        </property>
+        <property name="empresa" type="string">
+            <column name="empresa" length="30" />
+        </property>
+        <property name="dataAniversario" type="date">
+            <column name="dataAniversario" length="10" />
+        </property>
+        <set name="meiocontatos" table="meiocontato" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="idContato" not-null="true" />
+            </key>
+            <one-to-many class="br.com.agenda.model.Meiocontato" />
+        </set>
+        <set name="enderecos" table="endereco" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="idContato" />
+            </key>
+            <one-to-many class="br.com.agenda.model.Endereco" />
+        </set>
+    </class>
+</hibernate-mapping>
